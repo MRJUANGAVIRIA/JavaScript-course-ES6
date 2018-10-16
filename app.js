@@ -71,3 +71,50 @@ function receive(complete = () => console.log("Complete")){
 }
 receive();
 
+// Chapter IV Contant declarations and the constant has a scope
+
+const VALUE = 'HELLO WORLD';
+VALUE = "JUAN"; //Generate an error because I don't assign value of a constant
+console.log('value: ', VALUE);
+
+//Scope constant
+if (true){
+  const foo = 'bar';
+}
+console.log('foo: ', foo);
+
+if (true){
+  const foo = 'bar';
+  console.log('foo: ', foo);
+}
+
+// Shorthand properties for Objects
+
+let firstName = "Juan";
+let lastName = "Gaviria";
+
+let person = {firstName, lastName};
+
+console.log(person);
+
+let mascot = "Moose";
+
+let team = {person, mascot};
+
+console.log(team);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
