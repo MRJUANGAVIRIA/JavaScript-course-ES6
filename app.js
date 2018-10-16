@@ -51,6 +51,23 @@ fs.forEach(function(f) {
   f();
 })
 
+//CHAPTER III Default values for function parameters
 
+// Function withput defaulf parameters
+function greet(greeting,name){
+  console.log(greeting + ", " + name);
+}
+greet();
 
+// Function with defaulf parameters
+function greet(greeting,name = "Juan"){
+  console.log(greeting + ", " + name);
+}
+greet("Hello");
+
+//Example Function with default function with arrow notation
+function receive(complete = () => console.log("Complete")){
+  complete();
+}
+receive();
 
