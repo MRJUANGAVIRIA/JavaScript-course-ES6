@@ -170,15 +170,62 @@ function tag(strings, ...values){
 var message = tag `It's ${new Date().getHours()} I'm ${""}`;
 console.log(message);
 
+//CHAPTER IX Destructuring Assignment
+var obj = {
+  color:"blue"
+};
+console.log(obj.color);
 
+//the same
+var {color} = {
+  color:"blue"
+};
+console.log(color);
 
+//---------------
+function generateObj() {
+  return {
+    color:"blue",
+    name: "Jhon",
+    state: "New York",
+    position: "Forard"
+  }
+};
 
+var {name:firstName, state:locat} = generateObj();
+console.log(firstName);
+console.log(locat);
 
+//-----------------
+var [first,,,,fifth] = ["red", "yellow", "green", "blue", "orange"];
 
+console.log(first);
+console.log(fifth);
 
+//---------------
+var people = [
+  {
+    "firstName": "Juan",
+    "lastName": "Gaviria",
+    "phone": "3116004529",
+    "email": "juanga@hotmail.com"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Gaviria",
+    "phone": "3116004529",
+    "email": "juanga@hotmail.com"
+  },
+  {
+    "firstName": "Indira",
+    "lastName": "Gaviria",
+    "phone": "3116004529",
+    "email": "juanga@hotmail.com"
+  }
 
+]
 
-
+people.forEach(({firstName}) => console.log(firstName))
 
 
 
