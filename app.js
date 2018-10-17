@@ -116,6 +116,69 @@ var car = {color, speed, go};
 console.log(car.color);
 console.log(car.speed);
 
+// CHAPTER VII SPREAD OPERATOR ...
+console.log([1, 2, 3]);
+console.log(...[1, 2, 3]);
+
+let first = [1, 2, 3];
+let second = [4, 5, 6];
+
+first.push(...second)
+console.log(first)
+
+function addThreeThings(a, b, c){
+  let result = a + b + c;
+  console.log(result);
+}
+addThreeThings(...second)
+
+// CHAPTER VIII String Templates
+var salutation = 1000;
+var greeting = `
+${salutation}
+
+    crazy      World
+Hello                      How
+
+are
+        you?
+
+`;
+console.log(greeting);
+
+// Other Example
+var x = 1;
+var y = 2;
+var equation = `${x} + ${y} = ${x + y}`;
+console.log(equation);
+
+// Other Example
+var message = `It's ${new Date().getHours()} I'm sleepy`;
+console.log(message);
+
+// Other Example II
+function tag(strings, ...values){
+  if (values[0] < 23){
+    values[1] = "awake";
+  }
+  else {
+    values[1] = "sleppy";
+  }
+  return `${strings[0]}${values[0]}${strings[1]}${values[1]}`
+}
+
+var message = tag `It's ${new Date().getHours()} I'm ${""}`;
+console.log(message);
+
+
+
+
+
+
+
+
+
+
 
 
 
