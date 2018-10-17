@@ -88,6 +88,7 @@ if (true){
   console.log('foo: ', foo);
 }
 
+// CHAPTER V
 // Shorthand properties for Objects
 
 let firstName = "Juan";
@@ -103,7 +104,17 @@ let team = {person, mascot};
 
 console.log(team);
 
+// CHAPTER VI objects with enhancements
 
+var color = "red";
+var speed = 10;
+function go(){
+  console.log("room room");
+}
+var car = {color, speed, go};
+
+console.log(car.color);
+console.log(car.speed);
 
 
 
