@@ -227,9 +227,30 @@ var people = [
 
 people.forEach(({firstName}) => console.log(firstName))
 
-//Chapter X Modules
+//Chapter XIII Generators
+function* greet(){
+  console.log(`You Called 'next()'`);
+  yield "Hello";
+}
+let greeter = greet();
+console.log(greeter);
+let next = greeter.next();
+console.log(next);
 
+//
+function* serie(i){
+  yield i;
+  yield i + 5;
+  yield i + 10;
+  yield i + 20
+}
 
+let genSerie = serie(1);
+console.log(genSerie.next());
+console.log(genSerie.next());
+console.log(genSerie.next());
+console.log(genSerie.next());
+console.log(genSerie.next());
 
 
 
