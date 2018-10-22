@@ -251,14 +251,3 @@ console.log(genSerie.next());
 console.log(genSerie.next());
 console.log(genSerie.next());
 console.log(genSerie.next());
-
-
-
-
-
-
-
-
-
-
-
